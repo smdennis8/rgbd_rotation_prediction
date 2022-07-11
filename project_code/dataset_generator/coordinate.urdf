@@ -1,0 +1,108 @@
+<robot name="coord_axis">
+ <link name="base_link">
+   <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value=".1"/>
+      <inertia ixx="0.010609" ixy="0" ixz="0" iyy="0.050409" iyz="0" izz="0.05865"/>
+    </inertial>
+  </link>
+  <joint name="base_a" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="coord_axis_x"/>
+  </joint>
+  <link name="coord_axis_x">
+    <contact>
+      <lateral_friction value="0.2"/>
+      <rolling_friction value="0.001"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="coord_axis_x.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="coord_axis_x.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="base_b" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="coord_axis_y"/>
+  </joint>
+  <link name="coord_axis_y">
+    <contact>
+      <lateral_friction value="0.2"/>
+      <rolling_friction value="0.001"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="coord_axis_y.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="coord_axis_y.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="base_c" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="coord_axis_z"/>
+  </joint>
+  <link name="coord_axis_z">
+    <contact>
+      <lateral_friction value="0.2"/>
+      <rolling_friction value="0.001"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="coord_axis_z.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="coord_axis_z.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="white">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+  </link>
+</robot>
