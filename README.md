@@ -1,9 +1,8 @@
-# COMSE6998: Topics in Robot Learning - Research Project
+
 
 @contributors
 -------------
 - Dennis, Seth (sd3109)
-- Ducrest, Gustave (gd2528)
 - Román, Matthew (smr2219)
 
 @course_info
